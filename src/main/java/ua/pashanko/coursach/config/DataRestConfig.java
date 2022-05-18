@@ -8,8 +8,11 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import ua.pashanko.coursach.entity.Product;
 import ua.pashanko.coursach.entity.ProductCategory;
 
+import javax.persistence.EntityManager;
+
 @Configuration
 public class DataRestConfig implements RepositoryRestConfigurer {
+
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
         HttpMethod[] unsupportedActions = {HttpMethod.PUT, HttpMethod.POST, HttpMethod.DELETE};
